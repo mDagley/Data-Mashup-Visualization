@@ -1,0 +1,885 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns="http://data-gov.tw.rpi.edu/vocab/p/10035/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:dgtwc="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://data-gov.tw.rpi.edu/raw2/10035/data-10035.rdf" > 
+  <rdf:Description rdf:about="#entry45">
+    <a_parameter>0</a_parameter>
+    <below_100_of_poverty_percent>7.6</below_100_of_poverty_percent>
+    <below_125_of_poverty_standard_error>27</below_125_of_poverty_standard_error>
+    <below_100_of_poverty_standard_error_19>23</below_100_of_poverty_standard_error_19>
+    <b_parameter>5282</b_parameter>
+    <state>Utah</state>
+    <state_abbrv>UT</state_abbrv>
+    <below_125_of_poverty_percent>10.8</below_125_of_poverty_percent>
+    <below_100_of_poverty_number>209</below_100_of_poverty_number>
+    <below_125_of_poverty_number>297</below_125_of_poverty_number>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <state_factors>0.54</state_factors>
+    <all_income_levels>2754</all_income_levels>
+    <below_100_of_poverty_standard_error>0.9</below_100_of_poverty_standard_error>
+    <below_125_of_poverty_standard_error_19>1</below_125_of_poverty_standard_error_19>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry31">
+    <below_100_of_poverty_standard_error>0.8</below_100_of_poverty_standard_error>
+    <below_125_of_poverty_percent>12.6</below_125_of_poverty_percent>
+    <below_125_of_poverty_standard_error_19>0.9</below_125_of_poverty_standard_error_19>
+    <below_100_of_poverty_number>787</below_100_of_poverty_number>
+    <b_parameter>5282</b_parameter>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <below_125_of_poverty_standard_error>75</below_125_of_poverty_standard_error>
+    <below_100_of_poverty_standard_error_19>65</below_100_of_poverty_standard_error_19>
+    <a_parameter>0</a_parameter>
+    <below_100_of_poverty_percent>9.2</below_100_of_poverty_percent>
+    <below_125_of_poverty_number>1074</below_125_of_poverty_number>
+    <state_factors>1.12</state_factors>
+    <all_income_levels>8515</all_income_levels>
+    <state>New Jersey</state>
+    <state_abbrv>NJ</state_abbrv>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry42">
+    <below_125_of_poverty_number>132</below_125_of_poverty_number>
+    <all_income_levels>794</all_income_levels>
+    <state_factors>0.17</state_factors>
+    <below_100_of_poverty_standard_error>1.1</below_100_of_poverty_standard_error>
+    <a_parameter>0</a_parameter>
+    <below_100_of_poverty_standard_error_19>9</below_100_of_poverty_standard_error_19>
+    <state>South Dakota</state>
+    <state_abbrv>SD</state_abbrv>
+    <below_125_of_poverty_standard_error_19>1.3</below_125_of_poverty_standard_error_19>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <below_125_of_poverty_standard_error>10</below_125_of_poverty_standard_error>
+    <below_125_of_poverty_percent>16.6</below_125_of_poverty_percent>
+    <below_100_of_poverty_number>104</below_100_of_poverty_number>
+    <below_100_of_poverty_percent>13.1</below_100_of_poverty_percent>
+    <b_parameter>5282</b_parameter>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry29">
+    <b_parameter>5282</b_parameter>
+    <a_parameter>0</a_parameter>
+    <below_125_of_poverty_standard_error_19>1.3</below_125_of_poverty_standard_error_19>
+    <state>Nevada</state>
+    <state_abbrv>NV</state_abbrv>
+    <below_125_of_poverty_percent>15</below_125_of_poverty_percent>
+    <below_100_of_poverty_standard_error>1.1</below_100_of_poverty_standard_error>
+    <below_125_of_poverty_number>388</below_125_of_poverty_number>
+    <below_125_of_poverty_standard_error>34</below_125_of_poverty_standard_error>
+    <below_100_of_poverty_number>278</below_100_of_poverty_number>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <below_100_of_poverty_percent>10.8</below_100_of_poverty_percent>
+    <below_100_of_poverty_standard_error_19>30</below_100_of_poverty_standard_error_19>
+    <state_factors>0.67</state_factors>
+    <all_income_levels>2581</all_income_levels>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry12">
+    <b_parameter>5282</b_parameter>
+    <below_100_of_poverty_percent>9.9</below_100_of_poverty_percent>
+    <below_125_of_poverty_number>179</below_125_of_poverty_number>
+    <below_125_of_poverty_standard_error_19>1.2</below_125_of_poverty_standard_error_19>
+    <below_100_of_poverty_standard_error>1</below_100_of_poverty_standard_error>
+    <below_100_of_poverty_number>125</below_100_of_poverty_number>
+    <below_100_of_poverty_standard_error_19>13</below_100_of_poverty_standard_error_19>
+    <a_parameter>0</a_parameter>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <all_income_levels>1255</all_income_levels>
+    <below_125_of_poverty_percent>14.3</below_125_of_poverty_percent>
+    <state>Hawaii</state>
+    <state_abbrv>HI</state_abbrv>
+    <below_125_of_poverty_standard_error>15</below_125_of_poverty_standard_error>
+    <state_factors>0.29</state_factors>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry39">
+    <below_100_of_poverty_standard_error_19>83</below_100_of_poverty_standard_error_19>
+    <below_125_of_poverty_number>1763</below_125_of_poverty_number>
+    <below_100_of_poverty_percent>11</below_100_of_poverty_percent>
+    <below_125_of_poverty_standard_error>93</below_125_of_poverty_standard_error>
+    <a_parameter>0</a_parameter>
+    <below_100_of_poverty_number>1335</below_100_of_poverty_number>
+    <state>Pennsylvania</state>
+    <state_abbrv>PA</state_abbrv>
+    <state_factors>1.09</state_factors>
+    <all_income_levels>12178</all_income_levels>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <below_125_of_poverty_standard_error_19>0.8</below_125_of_poverty_standard_error_19>
+    <b_parameter>5282</b_parameter>
+    <below_125_of_poverty_percent>14.5</below_125_of_poverty_percent>
+    <below_100_of_poverty_standard_error>0.7</below_100_of_poverty_standard_error>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry4">
+    <below_100_of_poverty_number>431</below_100_of_poverty_number>
+    <state_factors>0.68</state_factors>
+    <below_100_of_poverty_percent>15.3</below_100_of_poverty_percent>
+    <below_125_of_poverty_number>593</below_125_of_poverty_number>
+    <b_parameter>5282</b_parameter>
+    <below_125_of_poverty_percent>21</below_125_of_poverty_percent>
+    <state>Arkansas</state>
+    <state_abbrv>AR</state_abbrv>
+    <below_125_of_poverty_standard_error_19>1.5</below_125_of_poverty_standard_error_19>
+    <all_income_levels>2822</all_income_levels>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <below_125_of_poverty_standard_error>41</below_125_of_poverty_standard_error>
+    <below_100_of_poverty_standard_error>1.3</below_100_of_poverty_standard_error>
+    <below_100_of_poverty_standard_error_19>36</below_100_of_poverty_standard_error_19>
+    <a_parameter>0</a_parameter>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry8">
+    <a_parameter>0</a_parameter>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <below_125_of_poverty_standard_error>11</below_125_of_poverty_standard_error>
+    <all_income_levels>861</all_income_levels>
+    <below_125_of_poverty_number>131</below_125_of_poverty_number>
+    <b_parameter>5282</b_parameter>
+    <state>Delaware</state>
+    <state_abbrv>DE</state_abbrv>
+    <below_125_of_poverty_standard_error_19>1.3</below_125_of_poverty_standard_error_19>
+    <state_factors>0.22</state_factors>
+    <below_100_of_poverty_percent>9.6</below_100_of_poverty_percent>
+    <below_125_of_poverty_percent>15.2</below_125_of_poverty_percent>
+    <below_100_of_poverty_standard_error_19>9</below_100_of_poverty_standard_error_19>
+    <below_100_of_poverty_number>82</below_100_of_poverty_number>
+    <below_100_of_poverty_standard_error>1.1</below_100_of_poverty_standard_error>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry49">
+    <below_125_of_poverty_standard_error>25</below_125_of_poverty_standard_error>
+    <a_parameter>0</a_parameter>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <b_parameter>5282</b_parameter>
+    <below_125_of_poverty_percent>20.5</below_125_of_poverty_percent>
+    <below_100_of_poverty_number>260</below_100_of_poverty_number>
+    <below_125_of_poverty_number>369</below_125_of_poverty_number>
+    <all_income_levels>1796</all_income_levels>
+    <below_100_of_poverty_standard_error>1.2</below_100_of_poverty_standard_error>
+    <state_factors>0.39</state_factors>
+    <state>West Virginia</state>
+    <state_abbrv>WV</state_abbrv>
+    <below_100_of_poverty_standard_error_19>21</below_100_of_poverty_standard_error_19>
+    <below_100_of_poverty_percent>14.5</below_100_of_poverty_percent>
+    <below_125_of_poverty_standard_error_19>1.4</below_125_of_poverty_standard_error_19>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry21">
+    <state_factors>1.13</state_factors>
+    <below_100_of_poverty_standard_error_19>51</below_100_of_poverty_standard_error_19>
+    <all_income_levels>5528</all_income_levels>
+    <below_100_of_poverty_percent>8.7</below_100_of_poverty_percent>
+    <below_125_of_poverty_standard_error>60</below_125_of_poverty_standard_error>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <below_125_of_poverty_percent>12.3</below_125_of_poverty_percent>
+    <b_parameter>5282</b_parameter>
+    <a_parameter>0</a_parameter>
+    <below_125_of_poverty_number>682</below_125_of_poverty_number>
+    <below_125_of_poverty_standard_error_19>1.1</below_125_of_poverty_standard_error_19>
+    <below_100_of_poverty_standard_error>0.9</below_100_of_poverty_standard_error>
+    <below_100_of_poverty_number>481</below_100_of_poverty_number>
+    <state>Maryland</state>
+    <state_abbrv>MD</state_abbrv>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry35">
+    <state_factors>0.16</state_factors>
+    <below_100_of_poverty_number>74</below_100_of_poverty_number>
+    <below_125_of_poverty_number>98</below_125_of_poverty_number>
+    <below_100_of_poverty_standard_error_19>7</below_100_of_poverty_standard_error_19>
+    <all_income_levels>625</all_income_levels>
+    <b_parameter>5282</b_parameter>
+    <below_100_of_poverty_percent>11.8</below_100_of_poverty_percent>
+    <a_parameter>0</a_parameter>
+    <below_100_of_poverty_standard_error>1.2</below_100_of_poverty_standard_error>
+    <below_125_of_poverty_standard_error_19>1.3</below_125_of_poverty_standard_error_19>
+    <state>North Dakota</state>
+    <state_abbrv>ND</state_abbrv>
+    <below_125_of_poverty_standard_error>8</below_125_of_poverty_standard_error>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <below_125_of_poverty_percent>15.7</below_125_of_poverty_percent>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry16">
+    <all_income_levels>2986</all_income_levels>
+    <state>Iowa</state>
+    <state_abbrv>IA</state_abbrv>
+    <below_125_of_poverty_percent>13.7</below_125_of_poverty_percent>
+    <a_parameter>0</a_parameter>
+    <below_125_of_poverty_number>408</below_125_of_poverty_number>
+    <below_100_of_poverty_number>285</below_100_of_poverty_number>
+    <below_100_of_poverty_standard_error>1.1</below_100_of_poverty_standard_error>
+    <below_100_of_poverty_percent>9.5</below_100_of_poverty_percent>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <state_factors>0.77</state_factors>
+    <below_125_of_poverty_standard_error_19>1.3</below_125_of_poverty_standard_error_19>
+    <below_100_of_poverty_standard_error_19>32</below_100_of_poverty_standard_error_19>
+    <b_parameter>5282</b_parameter>
+    <below_125_of_poverty_standard_error>38</below_125_of_poverty_standard_error>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry25">
+    <below_100_of_poverty_number>525</below_100_of_poverty_number>
+    <all_income_levels>2900</all_income_levels>
+    <below_100_of_poverty_percent>18.1</below_100_of_poverty_percent>
+    <state_factors>0.71</state_factors>
+    <below_125_of_poverty_standard_error>46</below_125_of_poverty_standard_error>
+    <b_parameter>5282</b_parameter>
+    <a_parameter>0</a_parameter>
+    <below_125_of_poverty_standard_error_19>1.6</below_125_of_poverty_standard_error_19>
+    <below_100_of_poverty_standard_error_19>40</below_100_of_poverty_standard_error_19>
+    <below_125_of_poverty_number>774</below_125_of_poverty_number>
+    <below_100_of_poverty_standard_error>1.4</below_100_of_poverty_standard_error>
+    <state>Mississippi</state>
+    <state_abbrv>MS</state_abbrv>
+    <below_125_of_poverty_percent>26.7</below_125_of_poverty_percent>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry32">
+    <all_income_levels>1977</all_income_levels>
+    <state_factors>0.58</state_factors>
+    <b_parameter>5282</b_parameter>
+    <below_125_of_poverty_standard_error>34</below_125_of_poverty_standard_error>
+    <below_125_of_poverty_number>509</below_125_of_poverty_number>
+    <state>New Mexico</state>
+    <state_abbrv>NM</state_abbrv>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <below_100_of_poverty_number>381</below_100_of_poverty_number>
+    <below_125_of_poverty_percent>25.7</below_125_of_poverty_percent>
+    <below_100_of_poverty_percent>19.3</below_100_of_poverty_percent>
+    <below_125_of_poverty_standard_error_19>1.7</below_125_of_poverty_standard_error_19>
+    <a_parameter>0</a_parameter>
+    <below_100_of_poverty_standard_error>1.6</below_100_of_poverty_standard_error>
+    <below_100_of_poverty_standard_error_19>31</below_100_of_poverty_standard_error_19>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry41">
+    <below_100_of_poverty_percent>14</below_100_of_poverty_percent>
+    <state_factors>1.06</state_factors>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <below_125_of_poverty_standard_error>62</below_125_of_poverty_standard_error>
+    <below_100_of_poverty_standard_error_19>55</below_100_of_poverty_standard_error_19>
+    <below_125_of_poverty_number>852</below_125_of_poverty_number>
+    <below_125_of_poverty_percent>19.1</below_125_of_poverty_percent>
+    <a_parameter>0</a_parameter>
+    <below_100_of_poverty_number>624</below_100_of_poverty_number>
+    <b_parameter>5282</b_parameter>
+    <below_100_of_poverty_standard_error>1.2</below_100_of_poverty_standard_error>
+    <state>South Carolina</state>
+    <state_abbrv>SC</state_abbrv>
+    <below_125_of_poverty_standard_error_19>1.4</below_125_of_poverty_standard_error_19>
+    <all_income_levels>4462</all_income_levels>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry46">
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <below_125_of_poverty_percent>12.4</below_125_of_poverty_percent>
+    <state_factors>0.18</state_factors>
+    <b_parameter>5282</b_parameter>
+    <below_100_of_poverty_number>55</below_100_of_poverty_number>
+    <below_125_of_poverty_standard_error>8</below_125_of_poverty_standard_error>
+    <state>Vermont</state>
+    <state_abbrv>VT</state_abbrv>
+    <below_125_of_poverty_number>75</below_125_of_poverty_number>
+    <below_125_of_poverty_standard_error_19>1.3</below_125_of_poverty_standard_error_19>
+    <below_100_of_poverty_standard_error>1.1</below_100_of_poverty_standard_error>
+    <a_parameter>0</a_parameter>
+    <all_income_levels>610</all_income_levels>
+    <below_100_of_poverty_percent>9</below_100_of_poverty_percent>
+    <below_100_of_poverty_standard_error_19>7</below_100_of_poverty_standard_error_19>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry1">
+    <below_125_of_poverty_standard_error>63</below_125_of_poverty_standard_error>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <b_parameter>5282</b_parameter>
+    <below_100_of_poverty_percent>14.3</below_100_of_poverty_percent>
+    <a_parameter>0</a_parameter>
+    <below_100_of_poverty_standard_error>1.2</below_100_of_poverty_standard_error>
+    <below_100_of_poverty_number>675</below_100_of_poverty_number>
+    <state_factors>1.05</state_factors>
+    <below_125_of_poverty_standard_error_19>1.3</below_125_of_poverty_standard_error_19>
+    <below_100_of_poverty_standard_error_19>57</below_100_of_poverty_standard_error_19>
+    <below_125_of_poverty_percent>18.5</below_125_of_poverty_percent>
+    <below_125_of_poverty_number>873</below_125_of_poverty_number>
+    <state>Alabama</state>
+    <state_abbrv>AL</state_abbrv>
+    <all_income_levels>4716</all_income_levels>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry9">
+    <below_125_of_poverty_standard_error_19>1.6</below_125_of_poverty_standard_error_19>
+    <state>District of Columbia</state>
+    <state_abbrv>DC</state_abbrv>
+    <below_100_of_poverty_number>98</below_100_of_poverty_number>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <all_income_levels>590</all_income_levels>
+    <below_125_of_poverty_standard_error>10</below_125_of_poverty_standard_error>
+    <below_100_of_poverty_standard_error_19>9</below_100_of_poverty_standard_error_19>
+    <b_parameter>5282</b_parameter>
+    <below_125_of_poverty_number>127</below_125_of_poverty_number>
+    <state_factors>0.18</state_factors>
+    <below_100_of_poverty_standard_error>1.5</below_100_of_poverty_standard_error>
+    <below_125_of_poverty_percent>21.5</below_125_of_poverty_percent>
+    <a_parameter>0</a_parameter>
+    <below_100_of_poverty_percent>16.5</below_100_of_poverty_percent>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry51">
+    <below_125_of_poverty_percent>13.4</below_125_of_poverty_percent>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <below_100_of_poverty_percent>10.1</below_100_of_poverty_percent>
+    <below_125_of_poverty_number>71</below_125_of_poverty_number>
+    <below_100_of_poverty_standard_error_19>6</below_100_of_poverty_standard_error_19>
+    <all_income_levels>529</all_income_levels>
+    <below_125_of_poverty_standard_error_19>1.3</below_125_of_poverty_standard_error_19>
+    <a_parameter>0</a_parameter>
+    <b_parameter>5282</b_parameter>
+    <below_100_of_poverty_standard_error>1.2</below_100_of_poverty_standard_error>
+    <state_factors>0.15</state_factors>
+    <below_125_of_poverty_standard_error>7</below_125_of_poverty_standard_error>
+    <below_100_of_poverty_number>54</below_100_of_poverty_number>
+    <state>Wyoming</state>
+    <state_abbrv>WY</state_abbrv>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry22">
+    <below_100_of_poverty_number>727</below_100_of_poverty_number>
+    <below_125_of_poverty_standard_error_19>1</below_125_of_poverty_standard_error_19>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <all_income_levels>6420</all_income_levels>
+    <below_100_of_poverty_standard_error_19>60</below_100_of_poverty_standard_error_19>
+    <a_parameter>0</a_parameter>
+    <below_100_of_poverty_percent>11.3</below_100_of_poverty_percent>
+    <state_factors>1.06</state_factors>
+    <below_100_of_poverty_standard_error>0.9</below_100_of_poverty_standard_error>
+    <below_125_of_poverty_standard_error>67</below_125_of_poverty_standard_error>
+    <below_125_of_poverty_percent>14.6</below_125_of_poverty_percent>
+    <below_125_of_poverty_number>934</below_125_of_poverty_number>
+    <state>Massachusetts</state>
+    <state_abbrv>MA</state_abbrv>
+    <b_parameter>5282</b_parameter>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry5">
+    <state_factors>1.25</state_factors>
+    <below_100_of_poverty_standard_error_19>174</below_100_of_poverty_standard_error_19>
+    <all_income_levels>36637</all_income_levels>
+    <below_125_of_poverty_standard_error>195</below_125_of_poverty_standard_error>
+    <b_parameter>5282</b_parameter>
+    <a_parameter>0</a_parameter>
+    <below_125_of_poverty_standard_error_19>0.5</below_125_of_poverty_standard_error_19>
+    <below_100_of_poverty_percent>14.6</below_100_of_poverty_percent>
+    <below_125_of_poverty_number>7196</below_125_of_poverty_number>
+    <below_125_of_poverty_percent>19.6</below_125_of_poverty_percent>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <below_100_of_poverty_number>5344</below_100_of_poverty_number>
+    <below_100_of_poverty_standard_error>0.5</below_100_of_poverty_standard_error>
+    <state>California</state>
+    <state_abbrv>CA</state_abbrv>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry19">
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <state>Louisiana</state>
+    <state_abbrv>LA</state_abbrv>
+    <below_100_of_poverty_standard_error_19>60</below_100_of_poverty_standard_error_19>
+    <below_100_of_poverty_percent>18.2</below_100_of_poverty_percent>
+    <below_100_of_poverty_number>788</below_100_of_poverty_number>
+    <all_income_levels>4326</all_income_levels>
+    <state_factors>1.05</state_factors>
+    <below_100_of_poverty_standard_error>1.4</below_100_of_poverty_standard_error>
+    <below_125_of_poverty_standard_error_19>1.5</below_125_of_poverty_standard_error_19>
+    <below_125_of_poverty_percent>24.4</below_125_of_poverty_percent>
+    <a_parameter>0</a_parameter>
+    <below_125_of_poverty_standard_error>67</below_125_of_poverty_standard_error>
+    <b_parameter>5282</b_parameter>
+    <below_125_of_poverty_number>1055</below_125_of_poverty_number>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry36">
+    <below_100_of_poverty_standard_error_19>88</below_100_of_poverty_standard_error_19>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <below_125_of_poverty_standard_error>98</below_125_of_poverty_standard_error>
+    <all_income_levels>11386</all_income_levels>
+    <b_parameter>5282</b_parameter>
+    <below_100_of_poverty_standard_error>0.8</below_100_of_poverty_standard_error>
+    <state_factors>1.09</state_factors>
+    <below_125_of_poverty_number>2035</below_125_of_poverty_number>
+    <below_125_of_poverty_standard_error_19>0.9</below_125_of_poverty_standard_error_19>
+    <state>Ohio</state>
+    <state_abbrv>OH</state_abbrv>
+    <below_100_of_poverty_number>1557</below_100_of_poverty_number>
+    <below_100_of_poverty_percent>13.7</below_100_of_poverty_percent>
+    <below_125_of_poverty_percent>17.9</below_125_of_poverty_percent>
+    <a_parameter>0</a_parameter>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry26">
+    <below_125_of_poverty_percent>17.5</below_125_of_poverty_percent>
+    <below_125_of_poverty_standard_error>70</below_125_of_poverty_standard_error>
+    <a_parameter>0</a_parameter>
+    <below_100_of_poverty_standard_error>1.1</below_100_of_poverty_standard_error>
+    <state>Missouri</state>
+    <state_abbrv>MO</state_abbrv>
+    <below_100_of_poverty_standard_error_19>63</below_100_of_poverty_standard_error_19>
+    <below_100_of_poverty_number>780</below_100_of_poverty_number>
+    <below_100_of_poverty_percent>13.3</below_100_of_poverty_percent>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <all_income_levels>5861</all_income_levels>
+    <b_parameter>5282</b_parameter>
+    <state_factors>1.11</state_factors>
+    <below_125_of_poverty_number>1023</below_125_of_poverty_number>
+    <below_125_of_poverty_standard_error_19>1.2</below_125_of_poverty_standard_error_19>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry11">
+    <all_income_levels>9541</all_income_levels>
+    <below_100_of_poverty_percent>15.5</below_100_of_poverty_percent>
+    <a_parameter>0</a_parameter>
+    <below_100_of_poverty_standard_error_19>84</below_100_of_poverty_standard_error_19>
+    <below_125_of_poverty_standard_error>93</below_125_of_poverty_standard_error>
+    <b_parameter>5282</b_parameter>
+    <state>Georgia</state>
+    <state_abbrv>GA</state_abbrv>
+    <below_100_of_poverty_number>1477</below_100_of_poverty_number>
+    <state_factors>1.08</state_factors>
+    <below_125_of_poverty_standard_error_19>1</below_125_of_poverty_standard_error_19>
+    <below_125_of_poverty_percent>19.6</below_125_of_poverty_percent>
+    <below_125_of_poverty_number>1867</below_125_of_poverty_number>
+    <below_100_of_poverty_standard_error>0.9</below_100_of_poverty_standard_error>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry15">
+    <below_125_of_poverty_percent>18.3</below_125_of_poverty_percent>
+    <below_125_of_poverty_standard_error>73</below_125_of_poverty_standard_error>
+    <below_100_of_poverty_percent>14.3</below_100_of_poverty_percent>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <state_factors>1.08</state_factors>
+    <a_parameter>0</a_parameter>
+    <below_125_of_poverty_number>1150</below_125_of_poverty_number>
+    <state>Indiana</state>
+    <state_abbrv>IN</state_abbrv>
+    <below_125_of_poverty_standard_error_19>1.2</below_125_of_poverty_standard_error_19>
+    <b_parameter>5282</b_parameter>
+    <all_income_levels>6288</all_income_levels>
+    <below_100_of_poverty_standard_error_19>66</below_100_of_poverty_standard_error_19>
+    <below_100_of_poverty_standard_error>1.1</below_100_of_poverty_standard_error>
+    <below_100_of_poverty_number>901</below_100_of_poverty_number>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry14">
+    <all_income_levels>12687</all_income_levels>
+    <below_125_of_poverty_number>2055</below_125_of_poverty_number>
+    <b_parameter>5282</b_parameter>
+    <below_100_of_poverty_percent>12.3</below_100_of_poverty_percent>
+    <below_100_of_poverty_standard_error_19>90</below_100_of_poverty_standard_error_19>
+    <below_125_of_poverty_standard_error_19>0.8</below_125_of_poverty_standard_error_19>
+    <below_125_of_poverty_percent>16.2</below_125_of_poverty_percent>
+    <a_parameter>0</a_parameter>
+    <below_100_of_poverty_standard_error>0.7</below_100_of_poverty_standard_error>
+    <state>Illinois</state>
+    <state_abbrv>IL</state_abbrv>
+    <state_factors>1.13</state_factors>
+    <below_125_of_poverty_standard_error>101</below_125_of_poverty_standard_error>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <below_100_of_poverty_number>1564</below_100_of_poverty_number>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry27">
+    <state_factors>0.24</state_factors>
+    <below_100_of_poverty_standard_error_19>12</below_100_of_poverty_standard_error_19>
+    <below_125_of_poverty_percent>18.2</below_125_of_poverty_percent>
+    <a_parameter>0</a_parameter>
+    <state>Montana</state>
+    <state_abbrv>MT</state_abbrv>
+    <below_125_of_poverty_standard_error_19>1.4</below_125_of_poverty_standard_error_19>
+    <below_125_of_poverty_standard_error>14</below_125_of_poverty_standard_error>
+    <below_100_of_poverty_number>125</below_100_of_poverty_number>
+    <all_income_levels>973</all_income_levels>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <below_100_of_poverty_percent>12.9</below_100_of_poverty_percent>
+    <below_125_of_poverty_number>177</below_125_of_poverty_number>
+    <below_100_of_poverty_standard_error>1.2</below_100_of_poverty_standard_error>
+    <b_parameter>5282</b_parameter>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry40">
+    <state_factors>0.3</state_factors>
+    <below_125_of_poverty_number>166</below_125_of_poverty_number>
+    <a_parameter>0</a_parameter>
+    <below_100_of_poverty_number>132</below_100_of_poverty_number>
+    <below_100_of_poverty_standard_error_19>14</below_100_of_poverty_standard_error_19>
+    <below_125_of_poverty_percent>16</below_125_of_poverty_percent>
+    <below_125_of_poverty_standard_error_19>1.4</below_125_of_poverty_standard_error_19>
+    <below_100_of_poverty_percent>12.7</below_100_of_poverty_percent>
+    <below_125_of_poverty_standard_error>15</below_125_of_poverty_standard_error>
+    <all_income_levels>1042</all_income_levels>
+    <state>Rhode Island</state>
+    <state_abbrv>RI</state_abbrv>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <b_parameter>5282</b_parameter>
+    <below_100_of_poverty_standard_error>1.3</below_100_of_poverty_standard_error>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry2">
+    <below_125_of_poverty_number>77</below_125_of_poverty_number>
+    <below_100_of_poverty_percent>8.2</below_100_of_poverty_percent>
+    <below_125_of_poverty_percent>11.4</below_125_of_poverty_percent>
+    <state>Alaska</state>
+    <state_abbrv>AK</state_abbrv>
+    <below_100_of_poverty_standard_error>1</below_100_of_poverty_standard_error>
+    <b_parameter>5282</b_parameter>
+    <below_100_of_poverty_number>55</below_100_of_poverty_number>
+    <below_100_of_poverty_standard_error_19>7</below_100_of_poverty_standard_error_19>
+    <all_income_levels>672</all_income_levels>
+    <below_125_of_poverty_standard_error>8</below_125_of_poverty_standard_error>
+    <state_factors>0.18</state_factors>
+    <below_125_of_poverty_standard_error_19>1.2</below_125_of_poverty_standard_error_19>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <a_parameter>0</a_parameter>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry33">
+    <below_125_of_poverty_standard_error_19>0.7</below_125_of_poverty_standard_error_19>
+    <all_income_levels>19309</all_income_levels>
+    <below_100_of_poverty_standard_error>0.6</below_100_of_poverty_standard_error>
+    <state_factors>1.17</state_factors>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <below_125_of_poverty_percent>18.6</below_125_of_poverty_percent>
+    <below_125_of_poverty_standard_error>134</below_125_of_poverty_standard_error>
+    <b_parameter>5282</b_parameter>
+    <below_125_of_poverty_number>3585</below_125_of_poverty_number>
+    <a_parameter>0</a_parameter>
+    <below_100_of_poverty_number>2734</below_100_of_poverty_number>
+    <below_100_of_poverty_percent>14.2</below_100_of_poverty_percent>
+    <state>New York</state>
+    <state_abbrv>NY</state_abbrv>
+    <below_100_of_poverty_standard_error_19>120</below_100_of_poverty_standard_error_19>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry50">
+    <below_125_of_poverty_number>757</below_125_of_poverty_number>
+    <state>Wisconsin</state>
+    <state_abbrv>WI</state_abbrv>
+    <below_100_of_poverty_percent>9.8</below_100_of_poverty_percent>
+    <below_125_of_poverty_standard_error_19>1.1</below_125_of_poverty_standard_error_19>
+    <below_125_of_poverty_standard_error>62</below_125_of_poverty_standard_error>
+    <b_parameter>5282</b_parameter>
+    <all_income_levels>5548</all_income_levels>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <below_100_of_poverty_number>544</below_100_of_poverty_number>
+    <below_100_of_poverty_standard_error_19>53</below_100_of_poverty_standard_error_19>
+    <a_parameter>0</a_parameter>
+    <below_125_of_poverty_percent>13.6</below_125_of_poverty_percent>
+    <state_factors>1.1</state_factors>
+    <below_100_of_poverty_standard_error>1</below_100_of_poverty_standard_error>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry6">
+    <below_100_of_poverty_standard_error_19>55</below_100_of_poverty_standard_error_19>
+    <a_parameter>0</a_parameter>
+    <state_factors>1.2</state_factors>
+    <state>Colorado</state>
+    <state_abbrv>CO</state_abbrv>
+    <b_parameter>5282</b_parameter>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <below_125_of_poverty_standard_error>63</below_125_of_poverty_standard_error>
+    <below_125_of_poverty_number>748</below_125_of_poverty_number>
+    <below_125_of_poverty_percent>15.2</below_125_of_poverty_percent>
+    <below_100_of_poverty_standard_error>1.1</below_100_of_poverty_standard_error>
+    <below_100_of_poverty_number>541</below_100_of_poverty_number>
+    <all_income_levels>4908</all_income_levels>
+    <below_100_of_poverty_percent>11</below_100_of_poverty_percent>
+    <below_125_of_poverty_standard_error_19>1.3</below_125_of_poverty_standard_error_19>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry47">
+    <below_100_of_poverty_number>799</below_100_of_poverty_number>
+    <b_parameter>5282</b_parameter>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <below_125_of_poverty_number>1093</below_125_of_poverty_number>
+    <state_factors>1.08</state_factors>
+    <below_125_of_poverty_standard_error>73</below_125_of_poverty_standard_error>
+    <below_100_of_poverty_standard_error>0.8</below_100_of_poverty_standard_error>
+    <below_125_of_poverty_percent>14.1</below_125_of_poverty_percent>
+    <below_125_of_poverty_standard_error_19>0.9</below_125_of_poverty_standard_error_19>
+    <state>Virginia</state>
+    <state_abbrv>VA</state_abbrv>
+    <below_100_of_poverty_percent>10.3</below_100_of_poverty_percent>
+    <a_parameter>0</a_parameter>
+    <all_income_levels>7735</all_income_levels>
+    <below_100_of_poverty_standard_error_19>64</below_100_of_poverty_standard_error_19>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry37">
+    <below_100_of_poverty_percent>13.6</below_100_of_poverty_percent>
+    <below_125_of_poverty_number>662</below_125_of_poverty_number>
+    <below_100_of_poverty_number>484</below_100_of_poverty_number>
+    <all_income_levels>3550</all_income_levels>
+    <state>Oklahoma</state>
+    <state_abbrv>OK</state_abbrv>
+    <b_parameter>5282</b_parameter>
+    <below_100_of_poverty_standard_error_19>45</below_100_of_poverty_standard_error_19>
+    <a_parameter>0</a_parameter>
+    <below_100_of_poverty_standard_error>1.3</below_100_of_poverty_standard_error>
+    <state_factors>0.91</state_factors>
+    <below_125_of_poverty_standard_error>51</below_125_of_poverty_standard_error>
+    <below_125_of_poverty_percent>18.6</below_125_of_poverty_percent>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <below_125_of_poverty_standard_error_19>1.4</below_125_of_poverty_standard_error_19>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry10">
+    <below_125_of_poverty_standard_error_19>0.7</below_125_of_poverty_standard_error_19>
+    <state>Florida</state>
+    <state_abbrv>FL</state_abbrv>
+    <below_125_of_poverty_number>3366</below_125_of_poverty_number>
+    <below_125_of_poverty_percent>18.7</below_125_of_poverty_percent>
+    <b_parameter>5282</b_parameter>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <all_income_levels>18022</all_income_levels>
+    <below_100_of_poverty_standard_error_19>110</below_100_of_poverty_standard_error_19>
+    <below_125_of_poverty_standard_error>127</below_125_of_poverty_standard_error>
+    <a_parameter>0</a_parameter>
+    <below_100_of_poverty_number>2370</below_100_of_poverty_number>
+    <below_100_of_poverty_percent>13.1</below_100_of_poverty_percent>
+    <state_factors>1.12</state_factors>
+    <below_100_of_poverty_standard_error>0.6</below_100_of_poverty_standard_error>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry30">
+    <state_factors>0.34</state_factors>
+    <below_100_of_poverty_standard_error>0.9</below_100_of_poverty_standard_error>
+    <below_125_of_poverty_standard_error>14</below_125_of_poverty_standard_error>
+    <below_125_of_poverty_percent>9.6</below_125_of_poverty_percent>
+    <below_125_of_poverty_number>124</below_125_of_poverty_number>
+    <below_100_of_poverty_number>91</below_100_of_poverty_number>
+    <all_income_levels>1300</all_income_levels>
+    <a_parameter>0</a_parameter>
+    <below_100_of_poverty_percent>7</below_100_of_poverty_percent>
+    <b_parameter>5282</b_parameter>
+    <below_100_of_poverty_standard_error_19>12</below_100_of_poverty_standard_error_19>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <state>New Hampshire</state>
+    <state_abbrv>NH</state_abbrv>
+    <below_125_of_poverty_standard_error_19>1.1</below_125_of_poverty_standard_error_19>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry43">
+    <state>Tennessee</state>
+    <state_abbrv>TN</state_abbrv>
+    <below_100_of_poverty_percent>15</below_100_of_poverty_percent>
+    <b_parameter>5282</b_parameter>
+    <below_125_of_poverty_standard_error_19>1.3</below_125_of_poverty_standard_error_19>
+    <all_income_levels>6163</all_income_levels>
+    <below_125_of_poverty_percent>21.7</below_125_of_poverty_percent>
+    <below_100_of_poverty_standard_error>1.1</below_100_of_poverty_standard_error>
+    <below_100_of_poverty_standard_error_19>67</below_100_of_poverty_standard_error_19>
+    <below_125_of_poverty_number>1339</below_125_of_poverty_number>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <below_100_of_poverty_number>924</below_100_of_poverty_number>
+    <state_factors>1.08</state_factors>
+    <a_parameter>0</a_parameter>
+    <below_125_of_poverty_standard_error>77</below_125_of_poverty_standard_error>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry23">
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <below_100_of_poverty_number>1273</below_100_of_poverty_number>
+    <state_factors>1.09</state_factors>
+    <below_125_of_poverty_standard_error_19>0.9</below_125_of_poverty_standard_error_19>
+    <below_125_of_poverty_standard_error>90</below_125_of_poverty_standard_error>
+    <below_125_of_poverty_percent>17.2</below_125_of_poverty_percent>
+    <b_parameter>5282</b_parameter>
+    <state>Michigan</state>
+    <state_abbrv>MI</state_abbrv>
+    <below_100_of_poverty_standard_error_19>80</below_100_of_poverty_standard_error_19>
+    <below_100_of_poverty_percent>13</below_100_of_poverty_percent>
+    <a_parameter>0</a_parameter>
+    <all_income_levels>9806</all_income_levels>
+    <below_100_of_poverty_standard_error>0.8</below_100_of_poverty_standard_error>
+    <below_125_of_poverty_number>1690</below_125_of_poverty_number>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry18">
+    <all_income_levels>4246</all_income_levels>
+    <a_parameter>0</a_parameter>
+    <below_100_of_poverty_standard_error_19>58</below_100_of_poverty_standard_error_19>
+    <below_125_of_poverty_number>938</below_125_of_poverty_number>
+    <below_100_of_poverty_number>724</below_100_of_poverty_number>
+    <below_125_of_poverty_standard_error>64</below_125_of_poverty_standard_error>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <below_100_of_poverty_standard_error>1.4</below_100_of_poverty_standard_error>
+    <below_125_of_poverty_percent>22.1</below_125_of_poverty_percent>
+    <below_125_of_poverty_standard_error_19>1.5</below_125_of_poverty_standard_error_19>
+    <below_100_of_poverty_percent>17.1</below_100_of_poverty_percent>
+    <b_parameter>5282</b_parameter>
+    <state_factors>1.05</state_factors>
+    <state>Kentucky</state>
+    <state_abbrv>KY</state_abbrv>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry28">
+    <state>Nebraska</state>
+    <state_abbrv>NE</state_abbrv>
+    <below_100_of_poverty_standard_error_19>20</below_100_of_poverty_standard_error_19>
+    <below_125_of_poverty_standard_error>23</below_125_of_poverty_standard_error>
+    <b_parameter>5282</b_parameter>
+    <below_125_of_poverty_standard_error_19>1.3</below_125_of_poverty_standard_error_19>
+    <below_100_of_poverty_percent>10.6</below_100_of_poverty_percent>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <state_factors>0.46</state_factors>
+    <below_125_of_poverty_percent>14.8</below_125_of_poverty_percent>
+    <below_100_of_poverty_number>188</below_100_of_poverty_number>
+    <below_100_of_poverty_standard_error>1.1</below_100_of_poverty_standard_error>
+    <all_income_levels>1774</all_income_levels>
+    <below_125_of_poverty_number>262</below_125_of_poverty_number>
+    <a_parameter>0</a_parameter>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry13">
+    <below_100_of_poverty_standard_error>1.2</below_100_of_poverty_standard_error>
+    <state_factors>0.36</state_factors>
+    <below_100_of_poverty_percent>12.2</below_100_of_poverty_percent>
+    <b_parameter>5282</b_parameter>
+    <below_125_of_poverty_number>277</below_125_of_poverty_number>
+    <a_parameter>0</a_parameter>
+    <below_125_of_poverty_standard_error>21</below_125_of_poverty_standard_error>
+    <below_100_of_poverty_number>185</below_100_of_poverty_number>
+    <all_income_levels>1515</all_income_levels>
+    <below_100_of_poverty_standard_error_19>18</below_100_of_poverty_standard_error_19>
+    <state>Idaho</state>
+    <state_abbrv>ID</state_abbrv>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <below_125_of_poverty_percent>18.3</below_125_of_poverty_percent>
+    <below_125_of_poverty_standard_error_19>1.4</below_125_of_poverty_standard_error_19>
+  </rdf:Description>
+  <rdf:Description rdf:about="">
+    <dcterms:identifier>/work/data-gov/data/input/web/10035/poveryty_state.csv</dcterms:identifier>
+    <rdfs:seeAlso rdf:resource="http://data-gov.tw.rpi.edu/raw2/10035/index.rdf#me"/>
+    <dcterms:description>generated by csv2rdf CSV2RDF (v1.1, 2009-01-28). http://data-gov.tw.rpi.edu/wiki/Source_Code_of_Data.gov_Wiki#Source_Code_of_Demos_and_Applications. </dcterms:description>
+    <dcterms:creator rdf:resource="http://tw.rpi.edu"/>
+    <dcterms:date>2010-02-18T14:00:44Z</dcterms:date>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry3">
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <state_factors>1.23</state_factors>
+    <a_parameter>0</a_parameter>
+    <below_100_of_poverty_standard_error_19>79</below_100_of_poverty_standard_error_19>
+    <b_parameter>5282</b_parameter>
+    <below_100_of_poverty_standard_error>1.2</below_100_of_poverty_standard_error>
+    <state>Arizona</state>
+    <state_abbrv>AZ</state_abbrv>
+    <below_100_of_poverty_number>1172</below_100_of_poverty_number>
+    <all_income_levels>6529</all_income_levels>
+    <below_125_of_poverty_standard_error>86</below_125_of_poverty_standard_error>
+    <below_125_of_poverty_number>1463</below_125_of_poverty_number>
+    <below_125_of_poverty_standard_error_19>1.3</below_125_of_poverty_standard_error_19>
+    <below_125_of_poverty_percent>22.4</below_125_of_poverty_percent>
+    <below_100_of_poverty_percent>18</below_100_of_poverty_percent>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry7">
+    <below_125_of_poverty_standard_error>40</below_125_of_poverty_standard_error>
+    <below_125_of_poverty_number>395</below_125_of_poverty_number>
+    <a_parameter>0</a_parameter>
+    <below_100_of_poverty_standard_error>1</below_100_of_poverty_standard_error>
+    <b_parameter>5282</b_parameter>
+    <state>Connecticut</state>
+    <state_abbrv>CT</state_abbrv>
+    <below_125_of_poverty_percent>11.5</below_125_of_poverty_percent>
+    <below_100_of_poverty_percent>8.1</below_100_of_poverty_percent>
+    <below_100_of_poverty_number>276</below_100_of_poverty_number>
+    <state_factors>0.88</state_factors>
+    <below_125_of_poverty_standard_error_19>1.2</below_125_of_poverty_standard_error_19>
+    <all_income_levels>3433</all_income_levels>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <below_100_of_poverty_standard_error_19>34</below_100_of_poverty_standard_error_19>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry20">
+    <below_125_of_poverty_standard_error>19</below_125_of_poverty_standard_error>
+    <below_100_of_poverty_percent>12</below_100_of_poverty_percent>
+    <below_100_of_poverty_standard_error>1.3</below_100_of_poverty_standard_error>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <below_100_of_poverty_number>158</below_100_of_poverty_number>
+    <state_factors>0.39</state_factors>
+    <below_125_of_poverty_standard_error_19>1.4</below_125_of_poverty_standard_error_19>
+    <a_parameter>0</a_parameter>
+    <state>Maine</state>
+    <state_abbrv>ME</state_abbrv>
+    <all_income_levels>1317</all_income_levels>
+    <below_100_of_poverty_standard_error_19>17</below_100_of_poverty_standard_error_19>
+    <below_125_of_poverty_number>208</below_125_of_poverty_number>
+    <b_parameter>5282</b_parameter>
+    <below_125_of_poverty_percent>15.8</below_125_of_poverty_percent>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry48">
+    <below_125_of_poverty_standard_error>67</below_125_of_poverty_standard_error>
+    <all_income_levels>6526</all_income_levels>
+    <below_125_of_poverty_standard_error_19>1</below_125_of_poverty_standard_error_19>
+    <below_125_of_poverty_percent>12.9</below_125_of_poverty_percent>
+    <state_factors>1.15</state_factors>
+    <below_100_of_poverty_number>680</below_100_of_poverty_number>
+    <below_100_of_poverty_percent>10.4</below_100_of_poverty_percent>
+    <b_parameter>5282</b_parameter>
+    <a_parameter>0</a_parameter>
+    <below_100_of_poverty_standard_error>0.9</below_100_of_poverty_standard_error>
+    <below_100_of_poverty_standard_error_19>61</below_100_of_poverty_standard_error_19>
+    <state>Washington</state>
+    <state_abbrv>WA</state_abbrv>
+    <below_125_of_poverty_number>840</below_125_of_poverty_number>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry38">
+    <below_100_of_poverty_standard_error_19>44</below_100_of_poverty_standard_error_19>
+    <state>Oregon</state>
+    <state_abbrv>OR</state_abbrv>
+    <below_125_of_poverty_percent>15.9</below_125_of_poverty_percent>
+    <a_parameter>0</a_parameter>
+    <b_parameter>5282</b_parameter>
+    <below_125_of_poverty_standard_error_19>1.4</below_125_of_poverty_standard_error_19>
+    <state_factors>1.01</state_factors>
+    <below_125_of_poverty_number>605</below_125_of_poverty_number>
+    <below_125_of_poverty_standard_error>52</below_125_of_poverty_standard_error>
+    <below_100_of_poverty_percent>10.6</below_100_of_poverty_percent>
+    <below_100_of_poverty_standard_error>1.2</below_100_of_poverty_standard_error>
+    <all_income_levels>3806</all_income_levels>
+    <below_100_of_poverty_number>403</below_100_of_poverty_number>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry44">
+    <below_100_of_poverty_standard_error>0.6</below_100_of_poverty_standard_error>
+    <below_100_of_poverty_percent>15.9</below_100_of_poverty_percent>
+    <below_125_of_poverty_percent>22.3</below_125_of_poverty_percent>
+    <below_100_of_poverty_standard_error_19>148</below_100_of_poverty_standard_error_19>
+    <below_125_of_poverty_standard_error_19>0.7</below_125_of_poverty_standard_error_19>
+    <state>Texas</state>
+    <state_abbrv>TX</state_abbrv>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <below_125_of_poverty_standard_error>168</below_125_of_poverty_standard_error>
+    <b_parameter>5282</b_parameter>
+    <a_parameter>0</a_parameter>
+    <state_factors>1.28</state_factors>
+    <below_125_of_poverty_number>5380</below_125_of_poverty_number>
+    <all_income_levels>24174</all_income_levels>
+    <below_100_of_poverty_number>3834</below_100_of_poverty_number>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry34">
+    <a_parameter>0</a_parameter>
+    <state_factors>1.11</state_factors>
+    <b_parameter>5282</b_parameter>
+    <below_125_of_poverty_standard_error_19>1</below_125_of_poverty_standard_error_19>
+    <below_125_of_poverty_percent>19.1</below_125_of_poverty_percent>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <below_125_of_poverty_number>1764</below_125_of_poverty_number>
+    <below_100_of_poverty_standard_error>0.9</below_100_of_poverty_standard_error>
+    <all_income_levels>9234</all_income_levels>
+    <state>North Carolina</state>
+    <state_abbrv>NC</state_abbrv>
+    <below_100_of_poverty_standard_error_19>80</below_100_of_poverty_standard_error_19>
+    <below_125_of_poverty_standard_error>91</below_125_of_poverty_standard_error>
+    <below_100_of_poverty_number>1285</below_100_of_poverty_number>
+    <below_100_of_poverty_percent>13.9</below_100_of_poverty_percent>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry17">
+    <below_100_of_poverty_number>346</below_100_of_poverty_number>
+    <below_125_of_poverty_standard_error>40</below_125_of_poverty_standard_error>
+    <below_100_of_poverty_standard_error_19>34</below_100_of_poverty_standard_error_19>
+    <below_125_of_poverty_percent>18.8</below_125_of_poverty_percent>
+    <state_factors>0.73</state_factors>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <all_income_levels>2716</all_income_levels>
+    <below_100_of_poverty_percent>12.7</below_100_of_poverty_percent>
+    <below_125_of_poverty_number>510</below_125_of_poverty_number>
+    <below_100_of_poverty_standard_error>1.3</below_100_of_poverty_standard_error>
+    <below_125_of_poverty_standard_error_19>1.5</below_125_of_poverty_standard_error_19>
+    <state>Kansas</state>
+    <state_abbrv>KS</state_abbrv>
+    <b_parameter>5282</b_parameter>
+    <a_parameter>0</a_parameter>
+  </rdf:Description>
+  <rdf:Description rdf:about="#entry24">
+    <below_100_of_poverty_standard_error_19>51</below_100_of_poverty_standard_error_19>
+    <below_125_of_poverty_standard_error_19>1.1</below_125_of_poverty_standard_error_19>
+    <all_income_levels>5120</all_income_levels>
+    <a_parameter>0</a_parameter>
+    <below_125_of_poverty_standard_error>57</below_125_of_poverty_standard_error>
+    <below_100_of_poverty_number>506</below_100_of_poverty_number>
+    <b_parameter>5282</b_parameter>
+    <state_factors>1.07</state_factors>
+    <rdf:type rdf:resource="http://data-gov.tw.rpi.edu/2009/data-gov-twc.rdf#DataEntry"/>
+    <below_100_of_poverty_standard_error>1</below_100_of_poverty_standard_error>
+    <below_100_of_poverty_percent>9.9</below_100_of_poverty_percent>
+    <below_125_of_poverty_percent>13.1</below_125_of_poverty_percent>
+    <below_125_of_poverty_number>668</below_125_of_poverty_number>
+    <state>Minnesota</state>
+    <state_abbrv>MN</state_abbrv>
+  </rdf:Description>
+</rdf:RDF>

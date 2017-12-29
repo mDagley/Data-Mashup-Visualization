@@ -1,0 +1,500 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+        <title>[FoF] Team Project</title>
+        <link href="css/main.css" rel="stylesheet" type="text/css">
+        <script type='text/javascript' src="https://www.gstatic.com/charts/loader.js"> </script>
+        <script type='text/javascript' src="js/FOFprojectScript.js"></script>
+        <script type='text/xmldata' src="js/XSLT.xsl"></script>
+        <script type='text/javascript' src="js/onclick.js"></script>
+    </head>
+    <body>
+
+<script id="sparql2json" type="text/xmldata">
+<!--
+
+XSLT script to format SPARQL Query Results XML Format into Exhibit JSON format
+
+Version 1 : jeni tennison (see http://www.jenitennison.com/visualisation/data/SRXtoGoogleVisData.xsl)
+Version 2 : Li Ding (2009-11-16)  (added one field in header, "label"; replace apos with whitespace)
+
+-->
+
+<!--
+=============================================
+BEGIN: XSLT Stylesheet Transform
+=============================================
+-->
+<xsl:stylesheet version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:sparql="http://www.w3.org/2005/sparql-results#">
+
+<xsl:strip-space elements="*" />
+<xsl:preserve-space elements="sparql:literal" />
+<xsl:output method="text" />
+
+<xsl:param name="tqx" />
+
+<xsl:variable name="defaultNs">
+  <xsl:call-template name="namespace">
+    <xsl:with-param name="string" select="/rdf:RDF/rdf:Description[1]/rdf:type[1]/@rdf:resource" />
+  </xsl:call-template>
+</xsl:variable>
+
+<xsl:template match="sparql:sparql">
+  <xsl:param name="tqx" select="$tqx" />
+
+  <xsl:variable name="reqId">
+    <xsl:variable name="fromTQX">
+      <xsl:call-template name="parseTQX">
+        <xsl:with-param name="param" select="'reqId'" />
+        <xsl:with-param name="tqx" select="$tqx" />
+      </xsl:call-template>
+    </xsl:variable>
+    <xsl:choose>
+      <xsl:when test="$fromTQX != ''">
+        <xsl:value-of select="$fromTQX" />
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:text>0</xsl:text>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>
+
+  <xsl:variable name="version">
+    <xsl:variable name="fromTQX">
+      <xsl:call-template name="parseTQX">
+        <xsl:with-param name="param" select="'version'" />
+        <xsl:with-param name="tqx" select="$tqx" />
+      </xsl:call-template>
+    </xsl:variable>
+    <xsl:choose>
+      <xsl:when test="$fromTQX != ''">
+        <xsl:value-of select="$fromTQX" />
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:text>0.6</xsl:text>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>
+
+  <xsl:variable name="out">
+    <xsl:variable name="fromTQX">
+      <xsl:call-template name="parseTQX">
+        <xsl:with-param name="param" select="'out'" />
+        <xsl:with-param name="tqx" select="$tqx" />
+      </xsl:call-template>
+    </xsl:variable>
+    <xsl:choose>
+      <xsl:when test="$fromTQX != ''">
+        <xsl:value-of select="$fromTQX" />
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:text>json</xsl:text>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>
+
+  <xsl:variable name="responseHandler">
+    <xsl:variable name="fromTQX">
+      <xsl:call-template name="parseTQX">
+        <xsl:with-param name="param" select="'responseHandler'" />
+        <xsl:with-param name="tqx" select="$tqx" />
+      </xsl:call-template>
+    </xsl:variable>
+    <xsl:choose>
+      <xsl:when test="$fromTQX != ''">
+        <xsl:value-of select="$fromTQX" />
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:text>google.visualization.Query.setResponse</xsl:text>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>
+  <xsl:value-of select="$responseHandler" />
+  <xsl:text>({</xsl:text>
+  <xsl:text>version:</xsl:text><xsl:value-of select="$version" /><xsl:text>,</xsl:text>
+  <xsl:text>status:'ok',</xsl:text>
+  <xsl:text>reqId:</xsl:text><xsl:value-of select="$reqId" /><xsl:text>,</xsl:text>
+  <xsl:text>table:{</xsl:text>
+  <xsl:apply-templates select="sparql:head" />
+  <xsl:apply-templates select="sparql:results" />
+  <xsl:text>}</xsl:text><!-- end table -->
+  <xsl:text>})</xsl:text>
+</xsl:template>
+
+<xsl:template match="sparql:head">
+  <xsl:text>cols:[</xsl:text>
+  <xsl:for-each select="sparql:variable">
+    <xsl:apply-templates select="." />
+    <xsl:if test="position() != last()">,</xsl:if>
+  </xsl:for-each>
+  <xsl:text>],</xsl:text>
+</xsl:template>
+
+<xsl:template match="sparql:variable">
+  <xsl:variable name="name" select="@name" />
+  <xsl:variable name="binding"
+    select="(/sparql:sparql/sparql:results/sparql:result/sparql:binding[@name = $name])[1]" />
+  <xsl:text>{id:'</xsl:text>
+  <xsl:value-of select="@name" />
+  <xsl:text>',label:'</xsl:text>
+  <xsl:value-of select="@name" />
+  <xsl:text>',type:'</xsl:text>
+  <xsl:choose>
+    <xsl:when test="$binding/sparql:uri">string</xsl:when>
+    <xsl:otherwise>
+      <xsl:variable name="datatype" select="$binding/sparql:literal/@datatype" />
+      <xsl:choose>
+        <xsl:when test="$datatype = 'http://www.w3.org/2001/XMLSchema#decimal'">number</xsl:when>
+        <xsl:when test="$datatype = 'http://www.w3.org/2001/XMLSchema#integer'">number</xsl:when>
+        <xsl:when test="$datatype = 'http://www.w3.org/2001/XMLSchema#float'">number</xsl:when>
+        <xsl:when test="$datatype = 'http://www.w3.org/2001/XMLSchema#double'">number</xsl:when>
+        <xsl:when test="$datatype = 'http://www.w3.org/2001/XMLSchema#int'">number</xsl:when>
+        <xsl:when test="$datatype = 'http://www.w3.org/2001/XMLSchema#boolean'">boolean</xsl:when>
+        <xsl:when test="$datatype = 'http://www.w3.org/2001/XMLSchema#date'">date</xsl:when>
+        <xsl:when test="$datatype = 'http://www.w3.org/2001/XMLSchema#dateTime'">datetime</xsl:when>
+        <xsl:when test="$datatype = 'http://www.w3.org/2001/XMLSchema#time'">timeofday</xsl:when>
+        <xsl:otherwise>
+          <xsl:variable name="value" select="$binding/sparql:literal" />
+          <xsl:choose>
+            <xsl:when test="string(number($value)) != 'NaN'">number</xsl:when>
+            <xsl:when test="$value = 'true' or $value = 'false'">boolean</xsl:when>
+            <xsl:otherwise>string</xsl:otherwise>
+          </xsl:choose>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:otherwise>
+  </xsl:choose>
+  <xsl:text>'}</xsl:text>
+</xsl:template>
+
+<xsl:template match="sparql:results">
+  <xsl:text>rows:[</xsl:text>
+  <xsl:for-each select="sparql:result">
+    <xsl:apply-templates select="." />
+    <xsl:if test="position() != last()">,</xsl:if>
+  </xsl:for-each>
+  <xsl:text>]</xsl:text>
+</xsl:template>
+
+<xsl:template match="sparql:result">
+  <xsl:variable name="result" select="." />
+  <xsl:text>{c:[</xsl:text>
+  <xsl:for-each select="/sparql:sparql/sparql:head/sparql:variable">
+    <xsl:variable name="name" select="@name" />
+    <xsl:apply-templates select="$result/sparql:binding[@name = $name]" />
+    <xsl:if test="position() != last()">,</xsl:if>
+  </xsl:for-each>
+  <xsl:text>]}</xsl:text>
+</xsl:template>
+
+<xsl:template match="sparql:binding">
+  <xsl:text>{v:</xsl:text>
+  <xsl:choose>
+    <xsl:when test="sparql:uri">
+      <xsl:text>'</xsl:text>
+      <xsl:value-of select="sparql:uri" />
+      <xsl:text>'</xsl:text>
+    </xsl:when>
+    <xsl:otherwise>
+      <xsl:variable name="datatype" select="sparql:literal/@datatype" />
+      <xsl:choose>
+        <xsl:when test="$datatype = 'http://www.w3.org/2001/XMLSchema#decimal' or
+                        $datatype = 'http://www.w3.org/2001/XMLSchema#integer' or
+                        $datatype = 'http://www.w3.org/2001/XMLSchema#float' or
+                        $datatype = 'http://www.w3.org/2001/XMLSchema#double' or
+                        $datatype = 'http://www.w3.org/2001/XMLSchema#int' or
+                        (not($datatype) and string(number(sparql:literal)) != 'NaN')">
+          <xsl:value-of select="sparql:literal" />
+        </xsl:when>
+        <xsl:when test="$datatype = 'http://www.w3.org/2001/XMLSchema#date' or
+                        $datatype = 'http://www.w3.org/2001/XMLSchema#dateTime'">
+          <xsl:text>new Date(</xsl:text>
+          <xsl:value-of select="substring(sparql:literal, 1, 4)" />
+          <xsl:text>,</xsl:text>
+          <xsl:value-of select="substring(sparql:literal, 6, 2)" />
+          <xsl:text>,</xsl:text>
+          <xsl:value-of select="substring(sparql:literal, 9, 2)" />
+          <xsl:if test="$datatype = 'http://www.w3.org/2001/XMLSchema#dateTime'">
+            <xsl:text>,</xsl:text>
+            <xsl:value-of select="substring(sparql:literal, 12, 2)" />
+            <xsl:text>,</xsl:text>
+            <xsl:value-of select="substring(sparql:literal, 15, 2)" />
+            <xsl:text>,</xsl:text>
+            <xsl:value-of select="substring(sparql:literal, 18, 2)" />
+          </xsl:if>
+          <xsl:text>)</xsl:text>
+        </xsl:when>
+        <xsl:when test="$datatype = 'http://www.w3.org/2001/XMLSchema#time'">
+          <xsl:text>[</xsl:text>
+          <xsl:value-of select="substring(sparql:literal, 1, 2)" />
+          <xsl:text>,</xsl:text>
+          <xsl:value-of select="substring(sparql:literal, 4, 2)" />
+          <xsl:text>,</xsl:text>
+          <xsl:value-of select="substring(sparql:literal, 7, 2)" />
+          <xsl:text>]</xsl:text>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:text>'</xsl:text>
+          <xsl:value-of select='translate(translate(sparql:literal,"&apos;"," "),"&#10;","")' />
+          <xsl:text>'</xsl:text>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:otherwise>
+  </xsl:choose>
+  <xsl:text>}</xsl:text>
+</xsl:template>
+
+<xsl:template name="namespace">
+  <xsl:param name="string" />
+  <xsl:param name="namespace" />
+  <xsl:choose>
+    <xsl:when test="contains($string, '#')">
+      <xsl:value-of select="concat(substring-before($string, '#'), '#')" />
+    </xsl:when>
+    <xsl:when test="contains($string, '/')">
+      <xsl:call-template name="namespace">
+        <xsl:with-param name="string" select="substring-after($string, '/')" />
+        <xsl:with-param name="namespace"
+          select="concat($namespace, substring-before($string, '/'), '/')" />
+      </xsl:call-template>
+    </xsl:when>
+    <xsl:otherwise>
+      <xsl:value-of select="$namespace" />
+    </xsl:otherwise>
+  </xsl:choose>
+</xsl:template>
+
+<xsl:template name="parseTQX">
+  <xsl:param name="param" />
+  <xsl:param name="tqx" />
+  <xsl:if test="contains($tqx, concat($param, ':'))">
+    <xsl:value-of select="substring-before(substring-after(concat($tqx, ';'), concat($param, ':')), ';')" />
+  </xsl:if>
+</xsl:template>
+
+</xsl:stylesheet>
+<!--
+=============================================
+END: XSLT Stylesheet Transform
+=============================================
+-->
+  </script>
+        <div id="container">
+            <header id="title">
+            <h1>EFFECTS OF EDUCATION ON POVERTY AND AVERAGE GROSS INCOME</h1>
+            <h2>FOF [Faction Of Four]</h2>
+            </header>
+            <br/>
+            <div id="leftInfo">
+                <h2 class="inline">Introduction: </h2><p class="inline">The project is mainly about verifying whether there is a strong correlation between the presence of strong academic foundation with the income generated by the state and whether better education leads to lowered poverty rate. One of the ways to identify this is by using library information and plotting it against different income parameters and poverty indicators available at the state level of USA.
+                </p>
+                <br /><br/>
+                <h2 class="inline">Target Audience: </h2><p class="inline">This project is intended towards people who plan and fund libraries, educational institutions and are responsible for improving the overall income of the state and reducing poverty. Higher average compensation of the state leads to the higher amount of income tax payment leading to overall growth of the city and lowered poverty. Also, this project tries to either ascertain or disprove the basic mentality of many which are whether intellect and education correspond to higher income and thus lowered overall poverty.</p>
+                
+            </div>
+            
+            <div id="rightInfo">
+                   <h2 class="left-aligned">Data Sources:</h2>
+                    <ol>
+                        <li><a href="https://data-gov.tw.rpi.edu/wiki/Dataset_353">Dataset 353 - State Library Agency Survey: Fiscal Year 2006</a></li>
+                        <li><a href="https://data-gov.tw.rpi.edu/wiki/Dataset_1356">Dataset 1356 - Tax Year 2007 County Income Data</a></li>
+                        <li><a href="https://data-gov.tw.rpi.edu/wiki/Dataset_10035">Dataset 10035 - Poverty by States 2008</a></li>
+                    </ol>
+            
+            </div>
+            
+            <nav id="queryNav">
+            <button class="query" onclick="query1()" id="btn1">Query 1</button>
+            <button class="query" onclick="query2()" id="btn2">Query 2</button>
+            <button class="query" onclick="query3()" id="btn3">Query 3</button>
+            <button class="query" onclick="query4()" id="btn4">Query 4</button>
+            <button class="query" onclick="query5()" id="btn5">Query 5</button>
+            <button class="query" onclick="query6()" id="btn6">Query 6</button>
+            </nav>
+            
+            <div class="leftContent" id="leftContent1">
+            <h2>Query Title</h2>
+            <p>This is where the visualization will be displayed.</p>
+            </div>
+            
+            <div class="rightContent" id="rightContent1">
+                <div class="code" id="code1">
+                        <h4>Books Per State </h4>
+                        <p>
+                            PREFIX ds353:  &lt http://data-gov.tw.rpi.edu/vocab/p/353/ &gt <br />
+                            PREFIX xsd:  &lt http://www.w3.org/2001/XMLSchema# &gt <br />
+                            SELECT ?state_abbrv ?number_of_books  <br />
+                            WHERE &#123;  <br />
+	                           ?entry ds353:phys_st ?state_abbrv . <br />
+	                           ?entry ds353:bkservol ?number_of_books . <br />
+ 	                              &#125; order by ?state_abbrv
+                        </p>
+                    </div>
+                <p class="dark">The first query was a simple display of the number of books per state. To find this number we queried dataset 353 to find the BKSERVOL value for each state. This value is the number of books and serial volumes that each state’s libraries contain. For each entry, we selected the state and the number of books by finding the PHYS_ST (physical state) for each entry and the BKSERVOL for each of those states.</p>
+                <p class="dark">For the visualization we simply displayed the number of books in each state in the geomap using the Google Visualization API. From this map, we can clearly see which states have the highest number of books in their state libraries.</p>
+                
+            </div>
+                <div class="leftContent" id="leftContent2">
+            <h2>Query Title</h2>
+            <p>This is where the visualization will be displayed.</p>
+            </div>
+                
+            
+            <div class="rightContent alt" id="rightContent2">
+                <div class="code" id="code2">
+                        <h4>Average Books by State </h4>
+                        <p>
+                            PREFIX ds353:  &lt http://data-gov.tw.rpi.edu/vocab/p/353/ &gt <br />
+                            PREFIX xsd:  &lt http://www.w3.org/2001/XMLSchema# &gt <br />
+                            SELECT ?state_abbrv ?number_of_books ?state_population   <br />
+                            WHERE &#123;  <br />
+	                           ?entry ds353:phys_st ?state_abbrv . <br />
+	                           ?entry ds353:bkservol ?number_of_books . <br />
+                               ?entry ds353:popu_st ?state_population .
+ 	                              &#125; order by ?state_abbrv
+                        </p>
+                    </div>
+                <p class="dark">The second query was an extension of the first query. For query two we divided the number of  
+                    books in each state by the total population of the state. This query still only relied on dataset 353. 
+                    To find this number we queried dataset 353 to find the BKSERVOL value for each state as well as the POPU_ST (state population). For each entry, we selected the state, the number of books, and the state population by finding the PHYS_ST (physical state) for each entry, the BKSERVOL for each of those states, and the POPU_ST for each state. </p>
+                   <p class="dark">For the visualization we simply displayed the number of books in each state divided by the total state population in the geomap using the Google Visualization API. From this map, we can see which states have the highest number of books in their state libraries per person.</p>
+
+            
+            </div>
+            
+            <div class="leftContent" id="leftContent3">
+            <h2>Query Title</h2>
+            <p>This is where the visualization will be displayed.</p>
+            </div>
+            
+            <div class="rightContent" id="rightContent3">
+                <div class="code" id="code3">
+                        <h4>Adjusted Gross Income </h4>
+                        <p>
+                            PREFIX ds1356:  &lt http://data-gov.tw.rpi.edu/vocab/p/1356/ &gt <br />
+                            SELECT ?state_abbrv ?adj_gross_inc  <br />
+                            WHERE &#123;  <br />
+	                           ?s ds1356:county_code '000' . <br />
+	                           ?s ds1356:year '2007' . <br />
+                               ?s ds1356:state_abbrv ?state_abbrv . <br />
+                               ?s ds1356:agi ?adj_gross_inc .
+ 	                              &#125; order by ?state_abbrv
+                        </p>
+                    </div>
+                <p class="dark">The third query was a simple display of the adjusted gross income per state. To find this number we queried dataset 1356 to find the AGI value for each state. This value is the adjusted gross income for each state/county. To find the value for only the states and not each individual county, we query for only the entries with a county code of “000”. For each entry, we selected the state and the AGI (Average Gross Income) by finding all entries with a county code of “000” and then find the state_abbrv (physical state) for each of those entries and the AGI for each of those states.</p>
+                <p class="dark">For the visualization we simply displayed the adjusted gross income in each state in the geomap using the Google Visualization API. From this map, we can see which states have the highest adjusted gross income.</p>
+
+            </div>
+                <div class="leftContent" id="leftContent4">
+            <h2>Query Title</h2>
+            <p>This is where the visualization will be displayed.</p>
+            </div>
+                
+            
+            <div class="rightContent alt" id="rightContent4">
+                <div class="code" id="code4">
+                        <h4>Average Income</h4>
+                        <p>
+                            PREFIX ds353:  &lt http://data-gov.tw.rpi.edu/vocab/p/353/ &gt <br />
+                            PREFIX ds1356:  &lt http://data-gov.tw.rpi.edu/vocab/p/1356/ &gt <br />
+                            SELECT ?state_abbrv ?adj_gross_inc  ?state_population  <br />
+                            WHERE &#123;  <br />
+                               ?entry ds353:phys_st ?state_abbrv . <br />
+				               ?entry ds353:popu_st ?state_population . <br />
+				               ?entry ds353:bkservol ?num_books_per_state . <br />
+	                           ?s ds1356:county_code '000' . <br />
+	                           ?s ds1356:year '2007' . <br />
+                               ?s ds1356:state_abbrv ?state_abbrv . <br />
+                               ?s ds1356:agi ?adj_gross_inc .
+ 	                              &#125; order by ?state_abbrv
+                        </p>
+                    </div>
+                <p class="dark">The fourth query was an extension of the first query. For query four we divided the adjusted gross income of each state by the total population of that state. To find this number we queried dataset 1356 to find the AGI value for each state and dataset 353 to find the population of each state. For each entry, we selected the state, the AGI, and the state population by finding the state population for each state using dataset 353 and then finding all entries with a county code of “000” and the state_abbrv (physical state) for each of those entries and the AGI for each of those states.
+                </p> 
+                <p class="dark">
+                For the visualization we simply displayed the adjusted gross income divided by the state population in each state in the geomap using the Google Visualization API. From this map, we can see which states have the highest adjusted gross income per person.
+                </p>
+            
+            </div>
+            
+            <div class="leftContent" id="leftContent5">
+            <h2>Query Title</h2>
+            <p>This is where the visualization will be displayed.</p>
+            </div>
+            
+            <div class="rightContent" id="rightContent5">
+                <div class="code" id="code5">
+                        <h4>Library Visits VS Gross Income and Poverty Rates </h4>
+                        <p>
+                            PREFIX ds353:  &lt http://data-gov.tw.rpi.edu/vocab/p/353/ &gt <br />
+                            PREFIX ds1356:  &lt http://data-gov.tw.rpi.edu/vocab/p/1356/ &gt <br />
+                            PREFIX ds10035:  &lt http://data-gov.tw.rpi.edu/vocab/p/10035/ &gt <br />
+                            SELECT ?state_abbrv ?adj_gross_inc ?state_population ?num_lib_visits ?poverty_percent  <br />
+                            WHERE &#123;  <br />
+                               ?entry ds353:phys_st ?state_abbrv . <br />
+				               ?entry ds353:popu_st ?state_population . <br />
+				               ?entry ds353:libvists ?num_lib_visits . <br />
+	                           ?s ds1356:county_code '000' . <br />
+	                           ?s ds1356:year '2007' . <br />
+                               ?s ds1356:state_abbrv ?state_abbrv . <br />
+                               ?s ds1356:agi ?adj_gross_inc . <br />
+                               ?q ds10035:state_abbrv ?state_abbrv . <br />
+                               ?q ds10035:below_100_of_poverty_percent ?poverty_percent . <br />
+ 	                              &#125; order by ?state_abbrv
+                        </p>
+                    </div>
+                <p class="dark">Query five used all three data sets. In this query, we created a line graph to compare the number of library visits per state to the adjusted gross income and poverty rates. With this query, we wanted to see if there was any correlation between higher frequency of library visits and income and poverty. Looking at figure 5.5.1 it easy to see the relationship between income and poverty rates, in general when income rates are higher, poverty rates are lower. The percentage of each state population that had visited the library did not seem to have any real correlation between income rates and poverty levels. To find these numbers we queried dataset 353 to find the population of each state as well as the number of library visits. We then queried dataset 1356 to find the adjusted gross income of each state. And finally, we queried dataset 10035 to find the percentage of people below 100% poverty in each state. For the query we selected the state, adjusted gross income, state population, number of library visits, and poverty percent for each state. </p>
+                <p class="dark">
+                For the visualization we simply displayed the adjusted gross income divided the state population, the number of library visits divided by the state population and multiplied by 100 (to help improve readability), and the poverty percent for each state. We displayed each of these data points on a line chart using the Google Visualization API and used the states as the x-axis.
+                </p>
+            </div>
+                <div class="leftContent" id="leftContent6">
+            <h2>Query Title</h2>
+            <p>This is where the visualization will be displayed.</p>
+            </div>
+                
+            
+            <div class="rightContent alt" id="rightContent6">
+                <div class="code" id="code6">
+                        <h4>State Aid to Libraries VS Gross Income</h4>
+                        <p>
+                            PREFIX ds353:  &lt http://data-gov.tw.rpi.edu/vocab/p/353/ &gt <br />
+                            PREFIX ds1356:  &lt http://data-gov.tw.rpi.edu/vocab/p/1356/ &gt <br />
+                            SELECT ?state_abbrv ?adj_gross_inc  ?state_aid_to_lib ?state_population  <br />
+                            WHERE &#123;  <br />
+                               ?entry ds353:phys_st ?state_abbrv . <br />
+				               ?entry ds353:popu_st ?state_population . <br />
+				               ?entry ds353:siaidlib ?state_aid_to_lib . <br />
+	                           ?s ds1356:county_code '000' . <br />
+	                           ?s ds1356:year '2007' . <br />
+                               ?s ds1356:state_abbrv ?state_abbrv . <br />
+                               ?s ds1356:agi ?adj_gross_inc . <br />
+ 	                              &#125; order by ?state_abbrv
+                        </p>
+                    </div>
+                <p class="dark">Query 6 uses datasets 353 and 1356 to compare the amount of state aid given to libraries in each state to the adjusted gross income of each state. In this query were trying to see if there is a correlation between funding libraries and income in a state. We also plotted a line showing the state population to give some idea of scale for each state. You can see that the there does seem to be some correlation between states with higher income providing more aid to state libraries. Whether the increased income influences the amount of aid given or the amount of aid given influences the income cannot be determined from this data alone. </p>
+                <p class="Dark">
+                To find these numbers we queried dataset 353 to find the state population and amount of state aid to libraries for each state. We then queried dataset 1356 to find the adjusted gross income of each state. For the query we selected the state, adjusted gross income, state aid to libraries, and state population for each state. </p>
+                <p class="Dark">
+                For the visualization we simply displayed the adjusted gross income, the amount of state aid, and the population for each state. We displayed each of these data points on a line chart using the Google Visualization API and used the states as the x-axis.
+                </p>
+            
+            </div>
+            
+            <div id="summary">
+            <h5 class="dark">Summary:</h5>
+            <p id="summaryTxt">Our assumption was that Intellect and income have a direct correlation which in turn could lead to reduced poverty. To verify the same, several queries were executed and multiple charts were plotted. The inference from these charts found that our hypothesis holds well in many of the states. However, we identified a few anomalies when tested against our SPARQL queries. For instance, where our hypothesis was tested by combining the three datasets in an attempt to identify the relation between the number of Library Visits, Gross Income and Poverty Rates.
+            </p>
+            <p id="summaryTxt">The results show that in the states such as Arizona, Connecticut and Alaska where our hypothesis was supported by the given data. Whereas, the same does not hold true in the states of New Hampshire and Maine. Here, we observe that the states which have a high Gross Income value have a relatively lower Poverty rate. But there seems to be no correlation between these rates and the number of Library visits.</p>
+            <p id="summaryTxt">
+            Another important observation made was between the relation between the State’s Aid to the Libraries and the Gross Income. The data provides evidence that the states which have a higher Gross Income also have witnessed considerable amounts towards the Libraries from their State’s Aids. However, the attribute of influence could not be identified with the observed data.
+            </p>
+            </div>
+            
+            <footer id="footer"></footer>
+        
+    </body>
+</html>
